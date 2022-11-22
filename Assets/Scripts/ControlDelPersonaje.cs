@@ -63,6 +63,10 @@ public class ControlDelPersonaje : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, angulo, 0f);
 
                 Vector3 direccionDelMovimiento = Quaternion.Euler(0f, anguloARotar, 0f) * Vector3.forward;
+                if (Input.GetButton("Fire3"))
+                {
+                    controlador.Move(direccionDelMovimiento.normalized * (velocidadDeMovimiento *2) * Time.deltaTime);
+                }
                 controlador.Move(direccionDelMovimiento.normalized * velocidadDeMovimiento * Time.deltaTime);
             }
 
@@ -70,6 +74,9 @@ public class ControlDelPersonaje : MonoBehaviour
             {
                 velocidad.y = Mathf.Sqrt(alturaDelSalto * -2f * gravedad);
             }
+
+            
+
 
             velocidad.y += gravedad * Time.deltaTime;
             controlador.Move(velocidad * Time.deltaTime);

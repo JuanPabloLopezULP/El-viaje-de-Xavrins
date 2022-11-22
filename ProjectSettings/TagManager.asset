@@ -6,6 +6,13 @@ TagManager:
   tags:
   - ManoDerecha
   - ManoEnemigo
+  - Caja
+  - Principal
+  - Medicina
+  - 1
+  - Enemigo
+  - Esconder
+  - ManoIzquierda
   layers:
   - Default
   - TransparentFX

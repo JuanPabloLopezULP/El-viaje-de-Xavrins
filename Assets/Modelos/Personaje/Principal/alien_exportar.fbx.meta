@@ -41,7 +41,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Rojo
-    second: {fileID: 2100000, guid: 7bf0e367ce03a4144bc2c480d9ae5913, type: 2}
+    second: {fileID: 2100000, guid: 4ae936ae271096f4194d3c6f524929e0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

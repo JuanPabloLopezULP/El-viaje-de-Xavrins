@@ -7,6 +7,7 @@ public class LogicaDeAtaque : MonoBehaviour
     public Animator principalAnimator;
     public ControlDelPersonaje principalControl;
     bool puedeAtacar;
+    
     void Start()
     {
         puedeAtacar = true;
@@ -32,4 +33,6 @@ public class LogicaDeAtaque : MonoBehaviour
         principalControl.puedeMoverse = true;
         puedeAtacar = true;
     }
+
+
 }
