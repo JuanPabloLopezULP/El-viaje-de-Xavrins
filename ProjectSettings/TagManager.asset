@@ -13,6 +13,8 @@ TagManager:
   - Enemigo
   - Esconder
   - ManoIzquierda
+  - ArmaEnemigo
+  - ArmaPrincipal
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - Suelo
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 

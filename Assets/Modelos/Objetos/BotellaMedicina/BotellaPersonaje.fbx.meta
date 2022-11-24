@@ -1,24 +1,41 @@
 fileFormatVersion: 2
-guid: af1a616e0556aa645a0fa7547b797000
+guid: 626bd5611b6aa2248a10707c677e21d7
 ModelImporter:
   serializedVersion: 20200
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -335948168854269974
+    second: Etiqueta|BotellaAction
+  - first:
+      74: -2933365634821719063
+    second: Etiqueta|ContenidoAction
+  - first:
+      74: -8806313501887679977
+    second: Etiqueta|EtiquetaAction
+  - first:
+      74: 1125445179406584079
+    second: Etiqueta|TapaAction
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Goma
-    second: {fileID: 2100000, guid: ca1f924799b8cd34d98c24b3440f78ef, type: 2}
+      name: Eqtiqueta
+    second: {fileID: 2100000, guid: ebe7b1e9507ebb24c9caa32e354e01b2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Metal
-    second: {fileID: 2100000, guid: 53841b09d0e38dd42a76b55f674527d6, type: 2}
+      name: Tapa
+    second: {fileID: 2100000, guid: 4baa6bf8cd0010f4e8d351ada42d367e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Metal oscuro
-    second: {fileID: 2100000, guid: e4afdd2c55042b242b4c44d126be8e54, type: 2}
+      name: botella
+    second: {fileID: 2100000, guid: c33dc93d8dbcc0b45b6c539f2ff76ac2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: contenido
+    second: {fileID: 2100000, guid: 55897ec05636af24da0976f14d95123c, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -88,7 +105,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human: []
