@@ -42,7 +42,7 @@ public class Caja : MonoBehaviour
             mensajeCaja.enabled = true;
             rangoAccion = true;
         }
-
+        
     }
 
     private void OnTriggerExit(Collider other)
@@ -52,5 +52,8 @@ public class Caja : MonoBehaviour
             mensajeCaja.enabled = false;
             rangoAccion = false;
         }
+
+        
     }
+
 }

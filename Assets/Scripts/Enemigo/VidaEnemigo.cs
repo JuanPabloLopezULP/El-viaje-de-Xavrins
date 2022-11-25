@@ -11,12 +11,14 @@ public class VidaEnemigo : MonoBehaviour
     public Animator enemigoAnimator;
     public ControlMovimientoEnemigo enemigoController;
     public Slider barraDeVidaEnemigo;
+    public  LogicaDeAtaque ataquePrincipal;
     // Start is called before the first frame update
     void Start()
     {
         vidaEnemigo = 100;
         danioEnemigo = 10;
         puedeRecibirDanio = true;
+        
     }
 
     // Update is called once per frame
@@ -27,11 +29,12 @@ public class VidaEnemigo : MonoBehaviour
         {
             RecibirDanio();
         }
-        
+
         if (vidaEnemigo == 0)
         {
             enemigoAnimator.SetTrigger("Muere");
-            
+            puedeRecibirDanio = false;
+
         }
     }
 
@@ -49,11 +52,26 @@ public class VidaEnemigo : MonoBehaviour
         enemigoController.estaAtacando = false;
     }
 
+    public void InicioDañoEnemigo()
+    {
+        puedeRecibirDanio = false;
+    }
+
+    public void FinDañoEnemigo()
+    {
+        puedeRecibirDanio = true;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("ArmaPrincipal"))
+        
+        if (other.CompareTag("ArmaPrincipal")&& ataquePrincipal.puedeDaniar)
         {
-            Debug.Log("daño al enemigo");
+            if (puedeRecibirDanio)
+            {
+                RecibirDanio();
+            }
         }
     }
+    
 }

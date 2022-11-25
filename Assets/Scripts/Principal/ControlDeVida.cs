@@ -10,7 +10,7 @@ public class ControlDeVida : MonoBehaviour
     public int salud;
     public int botellasEquipadas;
     public Slider barraDeVida;
-    bool puedeRecibirDanio;
+    public bool puedeRecibirDanio;
     public ControlMovimientoEnemigo enemigo;
     public GameObject botella;
     void Start()
