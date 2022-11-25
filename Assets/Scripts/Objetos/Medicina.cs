@@ -31,7 +31,7 @@ public class Medicina : MonoBehaviour
     {
         if (caja.cajaAbierta)
         {
-            
+            new WaitForSeconds(1);
             botellaAnimator.SetTrigger("Subir");
 
         }
@@ -54,7 +54,7 @@ public class Medicina : MonoBehaviour
         {
             mensajeItem.enabled = true;
             rangoAccion = true;
-            Debug.Log("colision con botella");
+            
         }
     }
 
@@ -64,7 +64,7 @@ public class Medicina : MonoBehaviour
         {
             mensajeItem.enabled = false;
             rangoAccion = false;
-            Debug.Log("salio de la colision con botella");
+            
         }
     }
 

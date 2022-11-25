@@ -15,6 +15,7 @@ public class ControlMovimientoEnemigo : MonoBehaviour
     public bool estaAtacando;
     public Animator enemigoAnimator;
     public string variableMovimiento;
+    public VidaEnemigo vidaEnemigo;
 
     void Start()
     {
@@ -28,26 +29,29 @@ public class ControlMovimientoEnemigo : MonoBehaviour
     
     void Update()
     {
-        
-        estaAlerta = Physics.CheckSphere(transform.position, rangoDeVision, capaDelJugador);
-        enRangoAtaque = Physics.CheckSphere(transform.position, rangoAtaque, capaDelJugador);
-        enemigoAnimator.SetFloat(variableMovimiento, 0);
-        if (estaAlerta)
+
+        if (vidaEnemigo.puedeMoverse)
         {
-            Vector3 posicionJugador = new Vector3(jugador.position.x, transform.position.y, jugador.position.z);
-            transform.LookAt(posicionJugador);
-            if (!enRangoAtaque && !estaAtacando)
+            estaAlerta = Physics.CheckSphere(transform.position, rangoDeVision, capaDelJugador);
+            enRangoAtaque = Physics.CheckSphere(transform.position, rangoAtaque, capaDelJugador);
+            enemigoAnimator.SetFloat(variableMovimiento, 0);
+            if (estaAlerta)
             {
-                transform.position = Vector3.MoveTowards(transform.position, posicionJugador, velocidadMovimiento * Time.deltaTime);
-                enemigoAnimator.SetFloat(variableMovimiento,1);
+                Vector3 posicionJugador = new Vector3(jugador.position.x, transform.position.y, jugador.position.z);
+                transform.LookAt(posicionJugador);
+                if (!enRangoAtaque && !estaAtacando)
+                {
+                    transform.position = Vector3.MoveTowards(transform.position, posicionJugador, velocidadMovimiento * Time.deltaTime);
+                    enemigoAnimator.SetFloat(variableMovimiento, 1);
+                }
+
             }
-            
-        }
-        if (enRangoAtaque)
-        {
-            if (!estaAtacando)
+            if (enRangoAtaque)
             {
-                enemigoAnimator.SetTrigger("Ataque");
+                if (!estaAtacando)
+                {
+                    enemigoAnimator.SetTrigger("Ataque");
+                }
             }
         }
     }

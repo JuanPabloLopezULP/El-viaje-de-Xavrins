@@ -8,6 +8,7 @@ public class VidaEnemigo : MonoBehaviour
     public int vidaEnemigo;
     public int danioEnemigo;
     public bool puedeRecibirDanio;
+    public bool puedeMoverse;
     public Animator enemigoAnimator;
     public ControlMovimientoEnemigo enemigoController;
     public Slider barraDeVidaEnemigo;
@@ -18,7 +19,7 @@ public class VidaEnemigo : MonoBehaviour
         vidaEnemigo = 100;
         danioEnemigo = 10;
         puedeRecibirDanio = true;
-        
+        puedeMoverse = true;
     }
 
     // Update is called once per frame
@@ -34,7 +35,7 @@ public class VidaEnemigo : MonoBehaviour
         {
             enemigoAnimator.SetTrigger("Muere");
             puedeRecibirDanio = false;
-
+            puedeMoverse = false;
         }
     }
 
