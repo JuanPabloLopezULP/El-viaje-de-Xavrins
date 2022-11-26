@@ -30,14 +30,14 @@ public class LogicaDeAtaque : MonoBehaviour
     {
         principalControl.puedeMoverse = false;
         puedeAtacar = false;
-        vidaJugador.puedeRecibirDanio = false;
+        
     }
 
     public void DejaDeAtacar()
     {
         principalControl.puedeMoverse = true;
         puedeAtacar = true;
-        vidaJugador.puedeRecibirDanio = true;
+        
     }
     public void Danio()
     {

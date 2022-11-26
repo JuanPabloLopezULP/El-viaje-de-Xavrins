@@ -58,10 +58,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Principal\Correr.cs" />
     <Compile Include="Assets\Scripts\Principal\EquiparObjeto.cs" />
+    <Compile Include="Assets\Scripts\Objetos\Punio.cs" />
     <Compile Include="Assets\Scripts\Objetos\Tronco.cs" />
     <Compile Include="Assets\Scripts\Principal\LogicaDeAtaque.cs" />
     <Compile Include="Assets\Scripts\Objetos\Medicina.cs" />
     <Compile Include="Assets\Scripts\Enemigo\ControlMovimientoEnemigo.cs" />
+    <Compile Include="Assets\Scripts\Enemigo\RotarBarraVida.cs" />
     <Compile Include="Assets\Scripts\Principal\ControlDeVida.cs" />
     <Compile Include="Assets\Scripts\Objetos\Caja.cs" />
     <Compile Include="Assets\Scripts\Enemigo\VidaEnemigo.cs" />
@@ -69,7 +71,6 @@
     <Compile Include="Assets\Scripts\Principal\UsarMedicina.cs" />
     <Compile Include="Assets\Scripts\Principal\ContadorMedicinas.cs" />
     <Compile Include="Assets\Scripts\Objetos\Pala.cs" />
-    <Compile Include="Assets\Scripts\Enemigo\RotarBarraVida.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

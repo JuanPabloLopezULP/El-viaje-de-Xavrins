@@ -80,11 +80,15 @@ public class ControlDeVida : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("ArmaEnemigo")&&enemigo.produceDanio&&puedeRecibirDanio)
+        if ((other.CompareTag("ArmaEnemigo") || other.CompareTag("ArmaEnemigo2")))
         {
-            principalAnimator.SetTrigger("RecibeDaño");
-            RestarSalud();
-            Debug.Log("salud = " + salud);
+            
+            if(enemigo.produceDanio && puedeRecibirDanio)
+            {
+                principalAnimator.SetTrigger("RecibeDaño");
+                RestarSalud();
+            }
+
         }
     }
 }

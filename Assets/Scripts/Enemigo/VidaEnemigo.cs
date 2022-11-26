@@ -17,7 +17,7 @@ public class VidaEnemigo : MonoBehaviour
     void Start()
     {
         vidaEnemigo = 100;
-        danioEnemigo = 10;
+        danioEnemigo = 30;
         puedeRecibirDanio = true;
         puedeMoverse = true;
     }
@@ -26,11 +26,7 @@ public class VidaEnemigo : MonoBehaviour
     void Update()
     {
         barraDeVidaEnemigo.value = vidaEnemigo;
-        if (Input.GetKeyDown("g"))
-        {
-            RecibirDanio();
-        }
-
+        
         if (vidaEnemigo == 0)
         {
             enemigoAnimator.SetTrigger("Muere");
