@@ -56,19 +56,20 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Principal\Correr.cs" />
     <Compile Include="Assets\Scripts\Principal\EquiparObjeto.cs" />
     <Compile Include="Assets\Scripts\Objetos\Punio.cs" />
     <Compile Include="Assets\Scripts\Objetos\Tronco.cs" />
-    <Compile Include="Assets\Scripts\Principal\LogicaDeAtaque.cs" />
+    <Compile Include="Assets\Scripts\Enemigo2\VidaEnemigo2.cs" />
     <Compile Include="Assets\Scripts\Objetos\Medicina.cs" />
     <Compile Include="Assets\Scripts\Enemigo\ControlMovimientoEnemigo.cs" />
     <Compile Include="Assets\Scripts\Enemigo\RotarBarraVida.cs" />
     <Compile Include="Assets\Scripts\Principal\ControlDeVida.cs" />
     <Compile Include="Assets\Scripts\Objetos\Caja.cs" />
     <Compile Include="Assets\Scripts\Enemigo\VidaEnemigo.cs" />
+    <Compile Include="Assets\Scripts\Enemigo2\ControlMovimientoEnemigo2.cs" />
     <Compile Include="Assets\Scripts\Principal\ControlDelPersonaje.cs" />
-    <Compile Include="Assets\Scripts\Principal\UsarMedicina.cs" />
+    <Compile Include="Assets\Scripts\Objetos\UsarMedicina.cs" />
+    <Compile Include="Assets\Scripts\Enemigo2\RotarBarraVida2.cs" />
     <Compile Include="Assets\Scripts\Principal\ContadorMedicinas.cs" />
     <Compile Include="Assets\Scripts\Objetos\Pala.cs" />
   </ItemGroup>

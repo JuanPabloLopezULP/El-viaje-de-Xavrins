@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlMovimientoEnemigo : MonoBehaviour
+public class ControlMovimientoEnemigo2 : MonoBehaviour
 {
     [Header("Variables de Movimiento")]
     public float rangoDeVision;
@@ -12,14 +12,14 @@ public class ControlMovimientoEnemigo : MonoBehaviour
     public Transform jugador;
     bool estaAlerta;
     public Animator enemigoAnimator;
-    public VidaEnemigo vidaEnemigo;
+    public VidaEnemigo2 vidaEnemigo;
 
     [Header("Variables de Ataque")]
     bool enRangoAtaque;
     public float rangoAtaque;
     public bool produceDanio;
     public bool estaAtacando;
-    
+
     [Header("Variables del ModoPatrulla")]
     public int rutina;
     float cronometro;
@@ -33,7 +33,7 @@ public class ControlMovimientoEnemigo : MonoBehaviour
         enRangoAtaque = false;
         produceDanio = false;
     }
-    
+
     void Update()
     {
         if (vidaEnemigo.puedeMoverse)
@@ -90,7 +90,7 @@ public class ControlMovimientoEnemigo : MonoBehaviour
                 break;
             case 2:
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, angulo, 0.5f);
-                transform.Translate(Vector3.forward * (velocidadMovimiento/2) * Time.deltaTime);
+                transform.Translate(Vector3.forward * (velocidadMovimiento / 2) * Time.deltaTime);
                 enemigoAnimator.SetBool("EstaPatrullando", true);
                 break;
         }

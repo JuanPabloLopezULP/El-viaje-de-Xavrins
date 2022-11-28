@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class VidaEnemigo : MonoBehaviour
+public class VidaEnemigo2 : MonoBehaviour
 {
     int vidaEnemigo;
     public bool puedeRecibirDanio;
     public bool puedeMoverse;
     public Animator enemigoAnimator;
-    public ControlMovimientoEnemigo enemigoController;
+    public ControlMovimientoEnemigo2 enemigoController;
     public Slider barraDeVidaEnemigo;
     public ControlDelPersonaje ataquePrincipal;
     public ControlDeVida vidaPrincipal;
@@ -20,7 +20,7 @@ public class VidaEnemigo : MonoBehaviour
         vidaEnemigo = 100;
         puedeRecibirDanio = true;
         puedeMoverse = true;
-        danioRecibido = 25;
+        danioRecibido = 40;
     }
 
     void Update()
@@ -29,16 +29,14 @@ public class VidaEnemigo : MonoBehaviour
         if (vidaPrincipal.salud == 0)
         {
             puedeMoverse = false;
-           
         }
-        
     }
 
     public void RecibirDanio()
     {
         if (vidaEnemigo > 0)
         {
-            vidaEnemigo -= (Mathf.Min(vidaEnemigo,danioRecibido));
+            vidaEnemigo -= (Mathf.Min(vidaEnemigo, danioRecibido));
         }
         if (vidaEnemigo == 0)
         {

@@ -57159,21 +57159,21 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.26666668
-    functionName: Danio
+  - time: 0.25
+    functionName: ProduceDanio
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.41666666
-    functionName: Danio2
+  - time: 0.38333333
+    functionName: NoProduceDanio
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.6666667
+  - time: 0.6
     functionName: DejaDeAtacar
     data: 
     objectReferenceParameter: {fileID: 0}

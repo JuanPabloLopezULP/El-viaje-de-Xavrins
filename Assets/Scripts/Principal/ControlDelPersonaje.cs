@@ -4,33 +4,41 @@ using UnityEngine;
 
 public class ControlDelPersonaje : MonoBehaviour
 {
-    [Header("Variables Movimiento Del Personaje")]
+    [Header("Movimiento Del Personaje")]
     public CharacterController controlador;
     public Transform camara;
     public float velocidadDeMovimiento;
     private float rotacionSuave = 0.1f;
     float velocidadRotacionSuave;
+    public string estaCorriendo;
 
 
-    [Header("Variables Salto y Suelo")]
-
+    [Header("Salto y Suelo")]
     public Transform chequeadorDeSuelo;
     public float distanciaAlSuelo;
     public LayerMask mascaraDeSuelo;
-
     Vector3 velocidad;
     public bool estaEnElSuelo;
     public float gravedad = -9.81f;
     public float alturaDelSalto;
 
+    //Ataque
+    [Header("Variables de Ataque")]
+    public bool puedeAtacar;
+    public bool puedeDaniar;
+
+
+
     //Animacion
     [Header("Variables de Animación")]
     public Animator animator;
-
-
     public string variableMovimiento;
     public string variableSuelo;
     public bool puedeMoverse;
+   
+    [Header("Barra de Vida")]
+    public ControlDeVida vidaJugador;
+
 
 
 
@@ -38,11 +46,15 @@ public class ControlDelPersonaje : MonoBehaviour
     {
         controlador = GetComponent<CharacterController>();
         puedeMoverse = true;
+        puedeAtacar = true;
+        puedeDaniar = false;
+
+
     }
 
     void Update()
     {
-
+        //Movimiento
         if (puedeMoverse)
         {
             estaEnElSuelo = Physics.CheckSphere(chequeadorDeSuelo.position, distanciaAlSuelo, mascaraDeSuelo);
@@ -75,13 +87,52 @@ public class ControlDelPersonaje : MonoBehaviour
                 velocidad.y = Mathf.Sqrt(alturaDelSalto * -2f * gravedad);
             }
 
-            
-
-
             velocidad.y += gravedad * Time.deltaTime;
             controlador.Move(velocidad * Time.deltaTime);
 
             animator.SetBool(variableSuelo, controlador.isGrounded);
         }
+        //Ataque
+        if (Input.GetButtonDown("Fire1") && estaEnElSuelo && puedeAtacar)
+        {
+            animator.SetTrigger("Ataca");
+            
+        }
+        
+        //Correr
+        if (Input.GetButtonDown("Fire3"))
+        {
+            animator.SetBool(estaCorriendo, true);
+        }
+        if (Input.GetButtonUp("Fire3"))
+        {
+            animator.SetBool(estaCorriendo, false);
+        }
+       
+    }
+
+    //Control de eventos y animaciones
+    public void Ataca()
+    {
+        puedeMoverse = false;
+        puedeAtacar = false;
+        vidaJugador.puedeRecibirDanio = false;
+
+    }
+
+    public void DejaDeAtacar()
+    {
+        puedeMoverse = true;
+        puedeAtacar = true;
+        vidaJugador.puedeRecibirDanio = true;
+    }
+    public void ProduceDanio()
+    {
+        puedeDaniar = true;
+    }
+    public void NoProduceDanio()
+    {
+        puedeDaniar = false;
+        
     }
 }
