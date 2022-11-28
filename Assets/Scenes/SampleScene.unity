@@ -2533,7 +2533,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.17121495, y: 0.000000017332736, z: -0.0000000028798806, w: 0.9852337}
+  m_LocalRotation: {x: 0.17121495, y: -0.000000017332727, z: 0.0000000028798794, w: 0.9852337}
   m_LocalPosition: {x: -0.4, y: 12, z: -30}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2931,7 +2931,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7794677, y: 1}
+    m_SensorSize: {x: 1.7748344, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5161,7 +5161,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1456929073
 MonoBehaviour:
@@ -5196,17 +5196,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rangoDeVision: 40
-  rangoAtaque: 3.5
+  variableMovimiento: EstaEnMovimiento
   velocidadMovimiento: 16
   capaDelJugador:
     serializedVersion: 2
     m_Bits: 64
   jugador: {fileID: 1937955812}
+  enemigoAnimator: {fileID: 1456929066}
+  vidaEnemigo: {fileID: 1456929073}
+  rangoAtaque: 3.5
   produceDanio: 0
   estaAtacando: 0
-  enemigoAnimator: {fileID: 1456929066}
-  variableMovimiento: EstaEnMovimiento
-  vidaEnemigo: {fileID: 1456929073}
+  rutina: 0
 --- !u!1 &1533626767
 GameObject:
   m_ObjectHideFlags: 0
@@ -5336,7 +5337,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7794677, y: 1}
+    m_SensorSize: {x: 1.7748344, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5352,7 +5353,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543829558}
-  m_LocalRotation: {x: 0.17121494, y: 0.000000016952312, z: -0.0000000029459901, w: 0.9852337}
+  m_LocalRotation: {x: 0.17121494, y: -0.000000016952304, z: 0.0000000029459892, w: 0.9852337}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5823,7 +5824,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7794677, y: 1}
+    m_SensorSize: {x: 1.7748344, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6021,17 +6022,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rangoDeVision: 40
-  rangoAtaque: 3.5
+  variableMovimiento: EstaEnMovimiento
   velocidadMovimiento: 16
   capaDelJugador:
     serializedVersion: 2
     m_Bits: 64
   jugador: {fileID: 1937955812}
+  enemigoAnimator: {fileID: 1771155163}
+  vidaEnemigo: {fileID: 1771155165}
+  rangoAtaque: 3.5
   produceDanio: 0
   estaAtacando: 0
-  enemigoAnimator: {fileID: 1771155163}
-  variableMovimiento: EstaEnMovimiento
-  vidaEnemigo: {fileID: 1771155165}
+  rutina: 0
 --- !u!135 &1771155167
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6043,7 +6045,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1771155168
 Rigidbody:
@@ -6661,7 +6663,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7794677, y: 1}
+    m_SensorSize: {x: 1.7748344, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

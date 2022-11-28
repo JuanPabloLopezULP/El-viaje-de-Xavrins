@@ -38,7 +38,10 @@ public class ControlMovimientoEnemigo : MonoBehaviour
     {
         if (vidaEnemigo.puedeMoverse)
         {
-            Patrullaje();
+            if (!estaAlerta)
+            {
+                Patrullaje();
+            }
             estaAlerta = Physics.CheckSphere(transform.position, rangoDeVision, capaDelJugador);
             enRangoAtaque = Physics.CheckSphere(transform.position, rangoAtaque, capaDelJugador);
             enemigoAnimator.SetFloat(variableMovimiento, 0);
@@ -54,6 +57,7 @@ public class ControlMovimientoEnemigo : MonoBehaviour
             }
             if (enRangoAtaque)
             {
+                enemigoAnimator.SetFloat(variableMovimiento, 0);
                 if (!estaAtacando)
                 {
                     enemigoAnimator.SetTrigger("Ataque");
@@ -90,7 +94,7 @@ public class ControlMovimientoEnemigo : MonoBehaviour
                 break;
             case 2:
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, angulo, 0.5f);
-                transform.Translate(Vector3.forward * (velocidadMovimiento/2) * Time.deltaTime);
+                transform.Translate(Vector3.forward * (velocidadMovimiento / 2) * Time.deltaTime);
                 enemigoAnimator.SetBool("EstaPatrullando", true);
                 break;
         }
@@ -109,6 +113,7 @@ public class ControlMovimientoEnemigo : MonoBehaviour
     public void NoProducirDanio()
     {
         produceDanio = false;
+        vidaEnemigo.puedeRecibirDanio = true;
     }
 
     public void FinAtaque()

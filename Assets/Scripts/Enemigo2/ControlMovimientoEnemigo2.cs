@@ -20,6 +20,7 @@ public class ControlMovimientoEnemigo2 : MonoBehaviour
     public bool produceDanio;
     public bool estaAtacando;
 
+
     [Header("Variables del ModoPatrulla")]
     public int rutina;
     float cronometro;
@@ -38,7 +39,10 @@ public class ControlMovimientoEnemigo2 : MonoBehaviour
     {
         if (vidaEnemigo.puedeMoverse)
         {
-            Patrullaje();
+            if (!estaAlerta)
+            {
+                Patrullaje();
+            }
             estaAlerta = Physics.CheckSphere(transform.position, rangoDeVision, capaDelJugador);
             enRangoAtaque = Physics.CheckSphere(transform.position, rangoAtaque, capaDelJugador);
             enemigoAnimator.SetFloat(variableMovimiento, 0);
@@ -54,6 +58,7 @@ public class ControlMovimientoEnemigo2 : MonoBehaviour
             }
             if (enRangoAtaque)
             {
+                enemigoAnimator.SetFloat(variableMovimiento, 0);
                 if (!estaAtacando)
                 {
                     enemigoAnimator.SetTrigger("Ataque");
@@ -109,6 +114,7 @@ public class ControlMovimientoEnemigo2 : MonoBehaviour
     public void NoProducirDanio()
     {
         produceDanio = false;
+        vidaEnemigo.puedeRecibirDanio = true;
     }
 
     public void FinAtaque()

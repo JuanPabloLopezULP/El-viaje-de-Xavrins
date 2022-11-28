@@ -27,8 +27,6 @@ public class ControlDelPersonaje : MonoBehaviour
     public bool puedeAtacar;
     public bool puedeDaniar;
 
-
-
     //Animacion
     [Header("Variables de Animación")]
     public Animator animator;
@@ -39,17 +37,12 @@ public class ControlDelPersonaje : MonoBehaviour
     [Header("Barra de Vida")]
     public ControlDeVida vidaJugador;
 
-
-
-
     void Start()
     {
         controlador = GetComponent<CharacterController>();
         puedeMoverse = true;
         puedeAtacar = true;
         puedeDaniar = false;
-
-
     }
 
     void Update()
@@ -117,7 +110,6 @@ public class ControlDelPersonaje : MonoBehaviour
         puedeMoverse = false;
         puedeAtacar = false;
         vidaJugador.puedeRecibirDanio = false;
-
     }
 
     public void DejaDeAtacar()
@@ -133,6 +125,5 @@ public class ControlDelPersonaje : MonoBehaviour
     public void NoProduceDanio()
     {
         puedeDaniar = false;
-        
     }
 }

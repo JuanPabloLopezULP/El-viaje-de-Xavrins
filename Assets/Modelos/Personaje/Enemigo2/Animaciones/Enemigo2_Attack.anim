@@ -72077,7 +72077,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 2.2333333
+  - time: 2.1166666
     functionName: FinAtaque
     data: 
     objectReferenceParameter: {fileID: 0}

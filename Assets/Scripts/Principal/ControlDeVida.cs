@@ -75,7 +75,7 @@ public class ControlDeVida : MonoBehaviour
     }
     public void FinBebe()
     {
-        Destroy(botella);
+        Destroy(botella.gameObject);
     }
 
     private void OnTriggerEnter(Collider other)
