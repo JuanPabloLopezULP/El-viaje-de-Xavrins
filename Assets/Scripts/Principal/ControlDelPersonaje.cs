@@ -93,7 +93,7 @@ public class ControlDelPersonaje : MonoBehaviour
         }
         
         //Correr
-        if (Input.GetButtonDown("Fire3"))
+        if (Input.GetButtonDown("Fire3") && estaEnElSuelo)
         {
             animator.SetBool(estaCorriendo, true);
         }

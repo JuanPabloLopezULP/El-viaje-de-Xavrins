@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Package</UnityProjectGenerator>
-    <UnityProjectGeneratorVersion>2.0.14</UnityProjectGeneratorVersion>
+    <UnityProjectGeneratorVersion>2.0.16</UnityProjectGeneratorVersion>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2021.3.1f1</UnityVersion>
@@ -57,10 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Principal\EquiparObjeto.cs" />
-    <Compile Include="Assets\Scripts\Objetos\Punio.cs" />
-    <Compile Include="Assets\Scripts\Objetos\Tronco.cs" />
     <Compile Include="Assets\Scripts\Enemigo2\VidaEnemigo2.cs" />
-    <Compile Include="Assets\Scripts\Objetos\Medicina.cs" />
     <Compile Include="Assets\Scripts\Enemigo\ControlMovimientoEnemigo.cs" />
     <Compile Include="Assets\Scripts\Enemigo\RotarBarraVida.cs" />
     <Compile Include="Assets\Scripts\Principal\ControlDeVida.cs" />
@@ -71,7 +68,7 @@
     <Compile Include="Assets\Scripts\Objetos\UsarMedicina.cs" />
     <Compile Include="Assets\Scripts\Enemigo2\RotarBarraVida2.cs" />
     <Compile Include="Assets\Scripts\Principal\ContadorMedicinas.cs" />
-    <Compile Include="Assets\Scripts\Objetos\Pala.cs" />
+    <Compile Include="Assets\Scripts\Objetos\ControlBotella.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -340,8 +337,8 @@
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.1f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
-    <Reference Include="clipper_library">
-      <HintPath>Library\PackageCache\com.unity.cinemachine@2.8.4\Runtime\ThirdParty\clipper_library.dll</HintPath>
+    <Reference Include="nunit.framework">
+      <HintPath>Library\PackageCache\com.unity.ext.nunit@2.0.3\net40\unity-custom\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.1f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
