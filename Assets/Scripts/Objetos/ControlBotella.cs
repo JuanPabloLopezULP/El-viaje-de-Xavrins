@@ -4,34 +4,45 @@ using UnityEngine;
 
 public class ControlBotella : MonoBehaviour
 {
-    public GameObject botella;
     bool rotar;
-    float altura;
-    float velocidad = 200.0f;
-    // Start is called before the first frame update
+    bool subir;
+    float velocidad = 120.0f;
+
     void Start()
     {
-        botella.gameObject.GetComponent<Transform>();
         rotar = false;
-        altura = 800.0f;
+        subir = false;
         StartCoroutine(Comportamiento());
     }
 
-    // Update is called once per frame
     void Update()
     {
+        if (subir)
+        {
+            if (transform.position.y < 3)
+            {
+                transform.Translate(Vector3.up*Time.deltaTime*2.5f);
+            }
+            if (transform.position.y >= 3)
+            {
+                rotar = true;
+                subir = false;
+            }
+        }
+        
         if (rotar)
         {
-            botella.transform.Rotate(0, velocidad * Time.deltaTime,0);
+            transform.Rotate(0, velocidad * Time.deltaTime,0);
         }
+
     }
+
+
 
     IEnumerator Comportamiento()
     {
         yield return new WaitForSecondsRealtime(0.5f);
-        botella.transform.Translate(Vector3.up * altura * Time.deltaTime);
-        yield return new WaitForSecondsRealtime(0.5f);
-        rotar = true;
+        subir = true;
         yield return null;
 
     }

@@ -17,6 +17,7 @@ TagManager:
   - ArmaPrincipal
   - ManoEnemigo2
   - ArmaEnemigo2
+  - Destino
   layers:
   - Default
   - TransparentFX

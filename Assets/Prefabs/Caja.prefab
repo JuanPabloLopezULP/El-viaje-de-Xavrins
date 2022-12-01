@@ -366,6 +366,6 @@ MonoBehaviour:
   mensajeItem: {fileID: 0}
   rangoAccion: 0
   cajaAnimator: {fileID: 7350990072386042880}
-  item: {fileID: 8872928772180939746, guid: 3d57e606583686c449e0848231472bbc, type: 3}
+  item: {fileID: 8642049134264573879, guid: 3d57e606583686c449e0848231472bbc, type: 3}
   cajaAbierta: 0
   controlVida: {fileID: 0}

@@ -65,10 +65,10 @@
     <Compile Include="Assets\Scripts\Enemigo\VidaEnemigo.cs" />
     <Compile Include="Assets\Scripts\Enemigo2\ControlMovimientoEnemigo2.cs" />
     <Compile Include="Assets\Scripts\Principal\ControlDelPersonaje.cs" />
+    <Compile Include="Assets\Scripts\Objetos\ControlBotella.cs" />
     <Compile Include="Assets\Scripts\Objetos\UsarMedicina.cs" />
     <Compile Include="Assets\Scripts\Enemigo2\RotarBarraVida2.cs" />
     <Compile Include="Assets\Scripts\Principal\ContadorMedicinas.cs" />
-    <Compile Include="Assets\Scripts\Objetos\ControlBotella.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

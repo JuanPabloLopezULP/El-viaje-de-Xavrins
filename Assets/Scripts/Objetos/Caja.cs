@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Caja : MonoBehaviour
 {
-    
     public Image mensajeCaja;
     public Image mensajeItem;
     public bool rangoAccion;
@@ -32,7 +31,6 @@ public class Caja : MonoBehaviour
             mensajeCaja.enabled = false;
             cajaAbierta = true;
             cajaAnimator.SetTrigger("AbrirCaja");
-
         }
         if (Input.GetButtonDown("Fire2") && rangoAccion && cajaAbierta && hayItem)
         {
@@ -82,7 +80,7 @@ public class Caja : MonoBehaviour
 
     private void InstanciarItem()
     {
-        item = Instantiate(item.gameObject);
+        item = Instantiate(item.gameObject, transform.position, transform.rotation);
         hayItem = true;
     }
 
@@ -93,5 +91,4 @@ public class Caja : MonoBehaviour
         hayItem = false;
         yield return null;
     }
-
 }
