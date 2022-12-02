@@ -170,8 +170,8 @@ MonoBehaviour:
   botellasEquipadas: 0
   barraDeVida: {fileID: 0}
   puedeRecibirDanio: 0
-  enemigo: {fileID: 0}
-  enemigo2: {fileID: 0}
+  enemigo: {fileID: 7538809183138858148, guid: 4e4c0e7451a831f4dbe856dd9902c49a, type: 3}
+  enemigo2: {fileID: 1680708394775656195, guid: 38df8ba3abd35d04e9aaef35c9dedd95, type: 3}
   botella: {fileID: 8918017660519503593, guid: 70350d3d5f810b24a8a03667c9b93ea3, type: 3}
 --- !u!114 &6804163267910400126
 MonoBehaviour:
@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   principalAnimator: {fileID: 6804163267910400119}
   principalControl: {fileID: 6804163267910400114}
-  caja: {fileID: 0}
+  caja: {fileID: 7350990072386042908, guid: 5f9772181527add439d199015c088edd, type: 3}
 --- !u!1001 &6804163267398540687
 PrefabInstance:
   m_ObjectHideFlags: 0

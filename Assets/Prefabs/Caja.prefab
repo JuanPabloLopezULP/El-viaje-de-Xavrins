@@ -368,4 +368,4 @@ MonoBehaviour:
   cajaAnimator: {fileID: 7350990072386042880}
   item: {fileID: 8642049134264573879, guid: 3d57e606583686c449e0848231472bbc, type: 3}
   cajaAbierta: 0
-  controlVida: {fileID: 0}
+  controlVida: {fileID: 6804163267910400125, guid: 44afa2786e122c94087a38eaf8067675, type: 3}

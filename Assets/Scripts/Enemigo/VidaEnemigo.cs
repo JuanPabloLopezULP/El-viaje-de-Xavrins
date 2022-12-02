@@ -14,13 +14,14 @@ public class VidaEnemigo : MonoBehaviour
     public ControlDelPersonaje ataquePrincipal;
     public ControlDeVida vidaPrincipal;
     public int danioRecibido;
+    public GameObject nubes;
 
     void Start()
     {
         vidaEnemigo = 100;
         puedeRecibirDanio = true;
         puedeMoverse = true;
-        danioRecibido = 25;
+        danioRecibido = 15;
     }
 
     void Update()
@@ -42,10 +43,7 @@ public class VidaEnemigo : MonoBehaviour
         }
         if (vidaEnemigo == 0)
         {
-            enemigoAnimator.SetTrigger("Muere");
-            puedeRecibirDanio = false;
-            puedeMoverse = false;
-            enemigoController.produceDanio = false;
+            StartCoroutine(SecuenciaMuerte());
         }
     }
 
@@ -74,5 +72,18 @@ public class VidaEnemigo : MonoBehaviour
                 enemigoAnimator.SetTrigger("Daño");
             }
         }
+    }
+    IEnumerator SecuenciaMuerte()
+    {
+        enemigoAnimator.SetTrigger("Muere");
+        puedeRecibirDanio = false;
+        puedeMoverse = false;
+        enemigoController.produceDanio = false;
+        yield return new WaitForSecondsRealtime(0.5f);
+        nubes = Instantiate(nubes.gameObject, transform.position, transform.rotation);
+        yield return new WaitForSecondsRealtime(0.75f);
+        Destroy(nubes.gameObject);
+        Destroy(this.gameObject);
+        yield return null;
     }
 }

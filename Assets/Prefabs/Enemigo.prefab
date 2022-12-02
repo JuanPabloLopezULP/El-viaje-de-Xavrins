@@ -642,9 +642,10 @@ MonoBehaviour:
   enemigoAnimator: {fileID: 7538809183138858145}
   enemigoController: {fileID: 7538809183138858148}
   barraDeVidaEnemigo: {fileID: 7538809182641707266}
-  ataquePrincipal: {fileID: 0}
-  vidaPrincipal: {fileID: 0}
+  ataquePrincipal: {fileID: 6804163267910400114, guid: 44afa2786e122c94087a38eaf8067675, type: 3}
+  vidaPrincipal: {fileID: 6804163267910400125, guid: 44afa2786e122c94087a38eaf8067675, type: 3}
   danioRecibido: 0
+  nubes: {fileID: 1488740973741660389, guid: 78b37d88454e02a4f91988d8ad226c98, type: 3}
 --- !u!1001 &7538809181116294802
 PrefabInstance:
   m_ObjectHideFlags: 0
